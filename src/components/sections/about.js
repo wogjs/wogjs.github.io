@@ -13,7 +13,7 @@ const StyledSection = styled.section`
   width: 100%;
   height: auto;
   background: ${({ theme }) => theme.colors.background};
-  margin-top: 4rem;
+  margin-top: -5rem;
 `
 
 const StyledContentWrapper = styled(ContentWrapper)`
@@ -79,8 +79,8 @@ const About = ({ content }) => {
   // Only trigger animations if the intro is done or disabled
   useEffect(() => {
     if (isIntroDone) {
-      if (tOnScreen) tControls.start({ opacity: 1, y: 0 })
-      if (iOnScreen) iControls.start({ opacity: 1, x: 0 })
+      if (tOnScreen) tControls.start({ opacity: 1, y: 20 })
+      if (iOnScreen) iControls.start({ opacity: 1, x: 20 })
     }
   }, [isIntroDone, tControls, iControls, tOnScreen, iOnScreen])
 

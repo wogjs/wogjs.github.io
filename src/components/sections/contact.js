@@ -91,6 +91,9 @@ const Contact = ({ content }) => {
             <a href={`mailto:${frontmatter.email}`}>
               <Underlining highlight>{frontmatter.email}</Underlining>
             </a>
+            <div>
+            <Underlining highlight>{frontmatter.phone}</Underlining>
+            </div>
           </div>
         </div>
         <Social width="9rem" padding="0.5rem 1.25rem" withIcon />

@@ -315,23 +315,6 @@ const Projects = ({ content }) => {
                           />
                         </a>
                       )}
-                      {frontmatter.external && (
-                        <a
-                          href={frontmatter.external}
-                          target="_blank"
-                          rel="nofollow noopener noreferrer"
-                          aria-label="External Link"
-                        >
-                          <Icon
-                            name="external"
-                            color={
-                              darkMode
-                                ? darkTheme.colors.subtext
-                                : lightTheme.colors.subtext
-                            }
-                          />
-                        </a>
-                      )}
                     </div>
                   </div>
                   {/* If image in viewport changes, update state accordingly */}
@@ -358,7 +341,7 @@ const Projects = ({ content }) => {
           href={sectionDetails.frontmatter.buttonUrl}
           target="_blank"
           rel="nofollow noopener noreferrer"
-          aria-label="External Link"
+          // aria-label="External Link"
         >
           <Button type="button" textAlign="center" center>
             {sectionDetails.frontmatter.buttonText}
