@@ -154,16 +154,17 @@ const Interests = ({ content }) => {
       <StyledContentWrapper>
         <h3 className="section-title">{frontmatter.title}</h3>
         <StyledInterests itemCount={interests.length} ref={ref}>
-          {interests.slice(0, shownInterests).map(({ name, icon }, key) => (
-            <motion.div
+          {interests.slice(0, shownInterests).map(({ name, icon, pages }, key) => (
+            <motion.a
               className="interest"
               key={key}
+              href={pages}
               custom={key}
               initial={{ opacity: 0, scaleY: 0 }}
               animate={iControls}
             >
               <Img className="icon" fixed={icon.childImageSharp.fixed} /> {name}
-            </motion.div>
+            </motion.a>
           ))}
           {shownInterests < interests.length && (
             <motion.div initial={{ opacity: 0, scaleY: 0 }} animate={bControls}>
