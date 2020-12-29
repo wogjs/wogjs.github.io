@@ -32,6 +32,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
     .section-title {
       padding-right: 2.5rem;
       padding-left: 2.5rem;
+      margin-bottom: 2rem;
       @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
         padding-right: 0;
         padding-left: 0;
@@ -152,7 +153,7 @@ const Interests = ({ content }) => {
   return (
     <StyledSection id="interests">
       <StyledContentWrapper>
-        <h3 className="section-title">{frontmatter.title}</h3>
+        <h2 className="section-title">{frontmatter.title}</h2>
         <StyledInterests itemCount={interests.length} ref={ref}>
           {interests.slice(0, shownInterests).map(({ name, icon, pages }, key) => (
             <motion.a

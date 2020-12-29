@@ -23,7 +23,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
   && {
     width: 100%;
     /* Don't stretch container over the full page width */
-    max-width: 45rem;
+    max-width: 50rem;
     height: 100%;
     display: inline-block;
     p {
@@ -78,7 +78,7 @@ const Contact = ({ content }) => {
       animate={onScreen ? "visible" : "hidden"}
     >
       <StyledContentWrapper>
-        <h3>{frontmatter.title}</h3>
+        <h2>{frontmatter.title}</h2>
         <MDXRenderer>{body}</MDXRenderer>
         <div className="profile">
           <Img

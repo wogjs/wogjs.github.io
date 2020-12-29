@@ -23,6 +23,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
     width: 100%;
     height: 100%;
     min-height: 60vh;
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;

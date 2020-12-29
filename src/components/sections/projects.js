@@ -46,6 +46,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
     .section-title {
       padding-right: 2.5rem;
       padding-left: 2.5rem;
+      margin-bottom: 2rem;
       @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
         padding-right: 0;
         padding-left: 0;
@@ -148,7 +149,7 @@ const StyledProject = styled(motion.div)`
     .title {
       margin-top: 0.625rem;
       margin-bottom: 0.625rem;
-      font-size: 1.375rem;
+      font-size: 1.35rem;
       line-height: 1.625rem;
       font-weight: 700;
     }
@@ -262,7 +263,7 @@ const Projects = ({ content }) => {
           variants={tVariants}
           animate={tOnScreen ? "visible" : "hidden"}
         >
-          <h3 className="section-title">{sectionDetails.frontmatter.title}</h3>
+          <h2 className="section-title">{sectionDetails.frontmatter.title}</h2>
           <div className="counter">
             {visibleProject} / {projects.length}
           </div>
